@@ -4,15 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import Parking.ParkingSpot;
-import Ticket.TicketRepository;
 import Ticket.VehicleType;
 
 public class BuildingManager {
-  // private final List<FloorManager> floorManagers;
   private final Map<Integer,FloorManager> floorManagers;
-  TicketRepository ticketRepository;
-  public BuildingManager(TicketRepository ticketRepository) {
-    this.ticketRepository = ticketRepository;
+  public BuildingManager() {
     this.floorManagers = new HashMap<>();
   }
 
@@ -39,5 +35,10 @@ public class BuildingManager {
         break;
     }
     return assignedSpot;
+  }
+
+  public void releaseSpot(ParkingSpot parkingSpot){
+    FloorManager floorManager = floorManagers.get(parkingSpot.getFloorNumber());
+    floorManager.releaseSpot(parkingSpot);
   }
 }

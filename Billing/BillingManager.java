@@ -19,7 +19,7 @@ public class BillingManager {
   public Bill generateBill(Ticket ticket) {
     LocalDateTime exitTime = LocalDateTime.now();
     double amount = billingService.calculateFee(ticket, exitTime);
-    Bill bill = new Bill(ticket.getTicketId(), counter.incrementAndGet(), ticket.getEntryTime(), exitTime, amount);
+    Bill bill = new Bill(ticket.getTicketId(), counter.incrementAndGet(),ticket.getVehicleNumber(), ticket.getEntryTime(), exitTime, amount);
     bills.put(bill.getBillId(), bill);
     System.out.println("Billid: "+bill.getBillId()+" generated for ticket id : "+bill.getTicketId());
     return bill;
@@ -30,7 +30,7 @@ public class BillingManager {
     System.out.println("================================");
     System.out.println("       BILL DETAILS   ");
     System.out.println("================================");
-    System.out.println("BILL ID     : " + bill.getTicketId());
+    System.out.println("BILL ID     : " + bill.getBillId());
     System.out.println("Ticket ID     : " + bill.getTicketId());
     System.out.println("Vehicle No    : " + bill.getVehicleNumber());
     System.out.println("Entry Time    : " + bill.getEntryTime());

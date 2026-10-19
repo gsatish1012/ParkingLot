@@ -11,13 +11,14 @@ public class Bill {
   String vehicleNumber;
   Status isPaid;
 
-  public Bill(int ticketId, int billId, LocalDateTime entryTime, LocalDateTime exitTime, double amount) {
+  public Bill(int ticketId, int billId,String vehicleNumber, LocalDateTime entryTime, LocalDateTime exitTime, double amount) {
     this.ticketId = ticketId;
     this.billId = billId;
     this.entryTime = entryTime;
     this.exitTime = exitTime;
     this.amount = amount;
     this.isPaid = Status.PENDING;
+    this.vehicleNumber=vehicleNumber;
   }
 
   public void setStatus(Status status) {

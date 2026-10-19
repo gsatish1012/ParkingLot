@@ -16,7 +16,7 @@ public class App {
     TicketRepository ticketRepository = new TicketRepository();
     BillingService billingService = new BillingService();
     PaymentService  paymentService = new PaymentService();
-    BuildingManager buildingManager = new BuildingManager(ticketRepository);
+    BuildingManager buildingManager = new BuildingManager();
     TicketManager ticketManager = new TicketManager(ticketRepository);
     BillingManager billingManager = new BillingManager(billingService);
     PaymentManager paymentManager = new PaymentManager(paymentService);
@@ -37,11 +37,12 @@ public class App {
     entryGate2.generateTicket(VehicleType.TWO_WHEELER, "AP051528");
   
 
-    ExitGate exitGate1= new ExitGate(ticketRepository, billingManager, paymentManager);
-    ExitGate exitGate2= new ExitGate(ticketRepository, billingManager, paymentManager);
+    ExitGate exitGate1= new ExitGate(ticketRepository, billingManager, paymentManager,buildingManager);
+    ExitGate exitGate2= new ExitGate(ticketRepository, billingManager, paymentManager,buildingManager);
 
     exitGate1.exitVehicle(3001, PaymentMode.CASH);
     exitGate2.exitVehicle(3003, PaymentMode.CARD);
 
+    entryGate2.generateTicket(VehicleType.TWO_WHEELER, "AP051529");
   }
 }

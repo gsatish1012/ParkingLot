@@ -85,6 +85,7 @@ public class FloorManager {
     } finally {
       floorLock.unlock();
     }
+    System.out.println("Released ParkingSpot : "+parkingSpot.getSpotId());
   }
 
   public void addParkingSpots(VehicleType vehicleType,int count){

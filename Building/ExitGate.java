@@ -12,10 +12,12 @@ public class ExitGate {
   TicketRepository ticketRepository;
   BillingManager billingManager;
   PaymentManager paymentManager;
-  public ExitGate(TicketRepository ticketRepository, BillingManager billingManager, PaymentManager paymentManager) {
+  BuildingManager buildingManager;
+  public ExitGate(TicketRepository ticketRepository, BillingManager billingManager, PaymentManager paymentManager,BuildingManager buildingManager) {
     this.ticketRepository = ticketRepository;
     this.billingManager = billingManager;
     this.paymentManager = paymentManager;
+    this.buildingManager=buildingManager;
   }
 
   public void exitVehicle(int ticketId,PaymentMode paymentMode){
@@ -25,5 +27,6 @@ public class ExitGate {
     billingManager.printBillDetails(bill.getBillId());
     Payment payment = paymentManager.processPayment(bill,paymentMode);
     paymentManager.printPaymentDetails(payment.getPaymentId());
+    buildingManager.releaseSpot(ticket.getParkingSpot());
   }
 }
