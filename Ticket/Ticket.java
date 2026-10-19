@@ -2,6 +2,8 @@ package Ticket;
 
 import java.time.LocalDateTime;
 
+import Parking.ParkingSpot;
+
 public class Ticket {
   private int ticketId;
   private String vehicleNumber;

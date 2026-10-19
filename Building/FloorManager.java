@@ -8,9 +8,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
 import Ticket.ChargeType;
-import Ticket.ParkingSpot;
-import Ticket.ParkingSpotFactory;
-import Ticket.ParkingStatus;
+import Parking.ParkingSpot;
+import Parking.ParkingSpotFactory;
+import Parking.ParkingStatus;
 import Ticket.VehicleType;
 
 public class FloorManager {

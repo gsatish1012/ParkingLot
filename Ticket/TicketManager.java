@@ -3,6 +3,8 @@ package Ticket;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import Parking.ParkingSpot;
+
 public class TicketManager {
   private final AtomicInteger counter = new AtomicInteger(3000);
   TicketRepository ticketRepository;

@@ -1,4 +1,4 @@
-package Ticket;
+package Parking;
 
 public enum ParkingStatus {
   AVAILABLE,

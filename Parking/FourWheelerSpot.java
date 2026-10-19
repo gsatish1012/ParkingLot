@@ -1,19 +1,23 @@
-package Ticket;
+package Parking;
 
-public class TwoWheelerSpot implements ParkingSpot{
+import Ticket.ChargeType;
+import Ticket.VehicleType;
+
+public class FourWheelerSpot implements ParkingSpot {
   String spotId;
   int floorNumber;
   ParkingStatus parkingStatus;
   ChargeType chargeType;
   double chargeAmount;
 
-  public TwoWheelerSpot(int floorNumber,String spotId,ParkingStatus parkingStatus,ChargeType chargeType,double chargeAmount){
+  public FourWheelerSpot(int floorNumber,String spotId,ParkingStatus parkingStatus,ChargeType chargeType,double chargeAmount){
     this.spotId=spotId;
     this.floorNumber=floorNumber;
     this.parkingStatus=parkingStatus;
     this.chargeAmount=chargeAmount;
     this.chargeType=chargeType;
   }
+
   @Override 
   public int getFloorNumber() {
     return floorNumber;
@@ -24,7 +28,7 @@ public class TwoWheelerSpot implements ParkingSpot{
   }
   @Override
   public VehicleType getVehicleType() {
-    return VehicleType.TWO_WHEELER;
+    return VehicleType.FOUR_WHEELER;
   }
   @Override
   public ParkingStatus getParkingStatus() {

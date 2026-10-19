@@ -1,4 +1,7 @@
-package Ticket;
+package Parking;
+
+import Ticket.ChargeType;
+import Ticket.VehicleType;
 
 public class ParkingSpotFactory {
   public ParkingSpot createParkingSpot(int floorNumber,String spotId,ParkingStatus parkingStatus,ChargeType chargeType ,VehicleType vehicleType){

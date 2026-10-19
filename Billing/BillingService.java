@@ -2,7 +2,7 @@ package Billing;
 
 import java.time.LocalDateTime;
 
-import Ticket.ParkingSpot;
+import Parking.ParkingSpot;
 import Ticket.Ticket;
 
 public class BillingService {

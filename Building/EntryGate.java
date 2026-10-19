@@ -1,6 +1,6 @@
 package Building;
 
-import Ticket.ParkingSpot;
+import Parking.ParkingSpot;
 import Ticket.Ticket;
 import Ticket.TicketManager;
 import Ticket.VehicleType;

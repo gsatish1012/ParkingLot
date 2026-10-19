@@ -3,7 +3,7 @@ package Building;
 import java.util.HashMap;
 import java.util.Map;
 
-import Ticket.ParkingSpot;
+import Parking.ParkingSpot;
 import Ticket.TicketRepository;
 import Ticket.VehicleType;
 

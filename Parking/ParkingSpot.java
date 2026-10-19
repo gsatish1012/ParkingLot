@@ -1,4 +1,7 @@
-package Ticket;
+package Parking;
+
+import Ticket.ChargeType;
+import Ticket.VehicleType;
 
 public interface ParkingSpot {
   public String getSpotId();
